@@ -1,0 +1,18 @@
+.nav-link{
+    margin: 0px 
+}
+
+.navbar-nav{
+    margin-top: 0 ;
+}
+
+
+@media (max-width:768px) {
+    .nav-link{
+        margin: 10px 20px 0px 20px !important
+    }
+
+    .navbar-nav{
+        margin-top: 15px !important;
+    }
+}

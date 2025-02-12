@@ -1,0 +1,11 @@
+.works_container h2,
+.wwd_container h2,
+.kos_container h2 {
+    font-size: 50px;
+}
+
+
+.works_container p {
+    margin-left: 20px;
+    font-size: 24px;
+}

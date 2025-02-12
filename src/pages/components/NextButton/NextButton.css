@@ -1,0 +1,32 @@
+.next_icon {
+    font-size: 30px;
+    margin: 30px 0px;
+    width: 100%;
+    color: black !important;
+}
+
+.next_icon a{
+    color: black !important;
+}
+
+.next_icon {
+    color: black !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: moveLeftRight 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

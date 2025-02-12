@@ -1,0 +1,44 @@
+.about_container h2,
+.wwd_container h2,
+.kos_container h2 {
+    font-size: 50px;
+}
+
+
+.about_container p {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.stack_container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.stack_icons {
+    animation: scrollLeft 15s linear infinite;
+}
+
+.stack_icons .icon {
+    margin: 20px 50px;
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
+}
+
+
+
+
+
+@keyframes scrollLeft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}

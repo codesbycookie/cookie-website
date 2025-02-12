@@ -1,0 +1,44 @@
+.work_card {
+width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 2s ease, box-shadow 0.3s ease;
+}
+
+.work_card .card_content p {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.work_card:hover .card_content p, 
+.work_card:active .card_content p {
+    opacity: 1;
+}
+
+
+.work_card:hover {
+    transform: translateY(-5px);
+    border: 1px solid grey;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
+}
+
+.card_content p {
+    text-align: start;
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
