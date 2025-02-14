@@ -1,3 +1,4 @@
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -5,21 +6,31 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: white; 
+  background: white;
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background:black; 
+  background: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: rgba(0, 0, 0, 0.5); /* Softer on hover */
 }
 
-body{
-  font-family: "Nunito", serif;
+/* Global Font */
+body {
+  font-family: "Nunito", sans-serif;
 }
+
+/* Responsive Padding */
+@media only screen and (max-width: 991px) {
+  .s_c {
+    padding: 0px;
+  }
+}
+
+

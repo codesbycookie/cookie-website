@@ -10,6 +10,12 @@
     font-size: 24px;
 }
 
+.about_content p{
+    font-size: 20px;
+    line-height: 33px;
+    font-weight: 500;
+}
+
 .stack_container {
     overflow: hidden;
     display: flex;

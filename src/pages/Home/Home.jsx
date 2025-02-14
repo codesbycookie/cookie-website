@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
+import { Typewriter } from "react-simple-typewriter";
 import hero_animation from "../../assets/animations/hero_animation.json";
 import Lottie from "lottie-react";
 import NextButton from "../components/NextButton/NextButton";
@@ -18,9 +19,14 @@ export default function Home() {
               style={{ width: "500px", lineHeight: "60px" }}
             >
               <h1 style={{ color: "black", marginBottom: '25px' }}>
-                Where every ideas baked to <b>perfection</b>
+              <Typewriter
+              words={["Where every ideas baked to perfection"]}
+              cursorBlinking={true}
+              loop={false}
+            />{" "}
+                
               </h1>
-              <h5>
+              <h5 style={{lineHeight: '30px'}}>
                 At <b>Cookie</b>, we blend technology with creativity to build
                 cutting-edge solutions that drive businesses forward. Whether
                 it's software development, AI-driven applications. We are

@@ -22,7 +22,7 @@ export default function About() {
         <div className="col-md-9">
           <div className="about_container">
             <h2>About Us</h2>
-            <div className="about_content">
+            <div className="about_content mt-4">
               <p>
                 At <b>Cookie</b>, we’re revolutionizing the way the world
                 experiences cookies with the power of technology. Our mission is
@@ -47,7 +47,7 @@ export default function About() {
           <div className="wwd_container mb-3">
             <h2>What Do We Do ?</h2>
             <div className="row g-3 d-flex mt-4">
-              <div className="col-md-6">
+              <div className="col-lg-6">
                 <Card
                   icon={<FaCode />}
                   title={"Web Based Solutions"}
@@ -56,7 +56,7 @@ export default function About() {
                   }
                 />
               </div>
-              <div className="col-md-6">
+              <div className="col-lg-6">
                 <Card
                   icon={<FaMobileScreenButton />}
                   title={"Mobile App Solutions"}

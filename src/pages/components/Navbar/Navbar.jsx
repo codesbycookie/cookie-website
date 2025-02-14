@@ -5,12 +5,12 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary p-4">
+    <nav className="navbar navbar-expand-lg sticky-top bg-body-tertiary p-md-4 px-3 pt-4">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
             src="/imgs/cookie_logo.jpeg"
-            height="50"
+            height="40"
             style={{ border: "3px solid black" }}
             alt=""
           />

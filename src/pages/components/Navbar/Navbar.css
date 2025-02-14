@@ -1,11 +1,15 @@
 .nav-link{
-    margin: 0px 
+    margin: 0px;
+    margin: 0 10px;
 }
 
 .navbar-nav{
     margin-top: 0 ;
 }
 
+.navbar {
+    background-color: transparent;
+}
 
 @media (max-width:768px) {
     .nav-link{

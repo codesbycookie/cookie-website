@@ -4,6 +4,10 @@
     font-size: 50px;
 }
 
+.works_content p{
+    font-size: 20px;
+    line-height: 35px;
+}
 
 .works_container p {
     margin-left: 20px;

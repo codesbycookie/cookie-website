@@ -8,7 +8,7 @@ export default function ContactUs() {
   return (
   <div className="contact_container" style={{ height: "calc(100vh - 120px)" }}>
         <div className="row g-0 w-100 h-100">
-          <div className="col-md-6 order-md-2 order-2 d-flex p-4 ps-5 d-flex justify-content-center align-items-center">
+          <div className="col-md-6 order-md-2 order-2 d-flex  px-md-5 d-flex justify-content-center align-items-center">
           <div>
             <ContactForm/>
             <Info/>
