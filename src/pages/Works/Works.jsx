@@ -2,6 +2,7 @@ import React from "react";
 import "./Works.css";
 import WorkCard from "./components/WorkCard";
 import SignaturePad from "./components/SignaturePad/SignaturePad";
+import AgreementSigner from "./components/SignaturePad/SignaturePad";
 
 export default function Works() {
   return (
@@ -84,7 +85,7 @@ export default function Works() {
           </div>
         </div>
       </div>
-      <SignaturePad />
+      <AgreementSigner />
     </div>
   );
 }
