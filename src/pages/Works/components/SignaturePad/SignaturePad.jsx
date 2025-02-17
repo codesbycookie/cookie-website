@@ -1,10 +1,20 @@
 import React, { useRef, useState } from "react";
 import SignatureCanvas from "react-signature-canvas";
-import { PDFDocument, rgb } from "pdf-lib";
+import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
 
 const AgreementSigner = () => {
   const sigCanvas = useRef({});
   const [signature, setSignature] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    date: "",
+    address: "",
+  });
+
+  // Handle input change
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   // Capture signature as an image
   const saveSignature = () => {
@@ -18,29 +28,39 @@ const AgreementSigner = () => {
     setSignature(null);
   };
 
-  // Function to Add Signature to the PDF
+  // Function to Add Signature and Text to the PDF
   const addSignatureToPDF = async () => {
     if (!signature) {
       alert("Please sign before generating the PDF.");
       return;
     }
 
-    // Load the existing PDF template (replace with your template URL)
-    const existingPdfBytes = await fetch('/agreement/template_agreement.pdf').then((res) => res.arrayBuffer());
+    // Load the existing PDF template
+    const existingPdfBytes = await fetch('/agreement/template_agreement.pdf').then(res => res.arrayBuffer());
 
     // Load PDF with pdf-lib
     const pdfDoc = await PDFDocument.load(existingPdfBytes);
     const pages = pdfDoc.getPages();
-    const firstPage = pages[3]; // Modify the first page
+    const firstPage = pages[0]; // Modify the first page
+
+    // Set font
+    const font = await pdfDoc.embedFont(StandardFonts.TimesRoman);
+    const bold_font = await pdfDoc.embedFont(StandardFonts.TimesRomanBold);
+
+    
+    // Add text fields
+    firstPage.drawText(`Dear ${formData.name}`, { x: 490, y: 230, size: 14, bold_font, color: rgb(1,1,1) });
+    firstPage.drawText(`Date: ${formData.date}`, { x: 50, y: 475, size: 14, font, color: rgb(1,1,1) });
+    firstPage.drawText(`Address: ${formData.address}`, { x: 50, y: 450, size: 14, font, color: rgb(1,1,1) });
 
     // Convert signature to Image format for the PDF
     const signatureImage = await pdfDoc.embedPng(signature);
     const { width, height } = firstPage.getSize();
 
-    // Define where to place the signature (adjust X, Y as needed)
+    // Define where to place the signature
     firstPage.drawImage(signatureImage, {
-      x: width / 2 + 130,  // Centered horizontally
-      y: 275,  // Adjust position vertically
+      x: width / 2 + 130,  
+      y: 275,  
       width: 100,
       height: 50,
     });
@@ -58,18 +78,32 @@ const AgreementSigner = () => {
   };
 
   return (
-    <div className="flex flex-col items-center space-y-4 p-5">
-      <h2 className="text-xl font-bold">Sign Agreement</h2>
+    <div className="container mt-5">
+      <h2 className="text-center">Sign Agreement</h2>
+
+      {/* Form Inputs */}
+      <div className="mb-3">
+        <label className="form-label">Name</label>
+        <input type="text" className="form-control" name="name" value={formData.name} onChange={handleChange} />
+      </div>
+      <div className="mb-3">
+        <label className="form-label">Date</label>
+        <input type="date" className="form-control" name="date" value={formData.date} onChange={handleChange} />
+      </div>
+      <div className="mb-3">
+        <label className="form-label">Address</label>
+        <textarea className="form-control" name="address" value={formData.address} onChange={handleChange}></textarea>
+      </div>
 
       {/* Signature Pad */}
-      <SignatureCanvas ref={sigCanvas} penColor="black" canvasProps={{ width: 400, height: 150, className: "border border-gray-300" }} />
-      <div className="flex space-x-2">
-        <button onClick={saveSignature} className="">Save</button>
-        <button onClick={clearSignature} className="">Clear</button>
+      <SignatureCanvas ref={sigCanvas} penColor="black" canvasProps={{ width: 400, height: 150, className: "border border-dark" }} />
+      <div className="d-flex mt-2">
+        <button onClick={saveSignature} className="btn btn-success me-2">Save</button>
+        <button onClick={clearSignature} className="btn btn-danger">Clear</button>
       </div>
 
       {/* Add Signature to PDF */}
-      <button onClick={addSignatureToPDF} className="">Download Signed PDF</button>
+      <button onClick={addSignatureToPDF} className="btn btn-primary mt-3">Download Signed PDF</button>
     </div>
   );
 };
