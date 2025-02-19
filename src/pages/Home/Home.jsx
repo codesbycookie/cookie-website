@@ -5,6 +5,8 @@ import hero_animation from "../../assets/animations/hero_animation.json";
 import Lottie from "lottie-react";
 import NextButton from "../components/NextButton/NextButton";
 import { useNavigate } from "react-router-dom";
+import './Home.css'
+
 
 export default function Home() {
 
@@ -34,15 +36,7 @@ export default function Home() {
                 innovations.
               </h5>
               <button
-                style={{
-                  padding: "10px 60px",
-                  fontSize: "20px",
-                  marginTop: "20px",
-                  borderRadius: "20px",
-                  backgroundColor: "black",
-                  color: "white",
-                  border: 0,
-                }}
+              className="contact_us"
                 onClick={() => navigate('/contact-us')}
               >
                 Contact Us

@@ -1,0 +1,16 @@
+.contact_us {
+    padding: 10px 60px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: 0;
+    transition: color 6ms ease;
+}
+
+.contact_us:hover {
+    background-color: var(--gold_color);
+    color: black;
+}
+

@@ -3,6 +3,10 @@
     margin: 0 10px;
 }
 
+.nav-link .active {
+    color: var(--gold_color)
+}
+
 .navbar-nav{
     margin-top: 0 ;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import './Navbar.css'
+import "./Navbar.css";
 import { BiMenuAltRight } from "react-icons/bi";
 import { NavLink } from "react-router-dom";
 
@@ -16,24 +16,24 @@ export default function Navbar() {
           />
         </a>
         <button
-  className="navbar-toggler"
-  style={{
-    fontSize: "40px",
-    color: "black",
-    border: "none",
-    borderRadius: "50%",
-    outline: "none",
-    boxShadow: "none",
-  }}
-  type="button"
-  data-bs-toggle="collapse"
-  data-bs-target="#navbarNav"
-  aria-controls="navbarNav"
-  aria-expanded="false"
-  aria-label="Toggle navigation"
->
-  <BiMenuAltRight />
-</button>
+          className="navbar-toggler"
+          style={{
+            fontSize: "40px",
+            color: "black",
+            border: "none",
+            borderRadius: "50%",
+            outline: "none",
+            boxShadow: "none",
+          }}
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <BiMenuAltRight />
+        </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
