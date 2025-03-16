@@ -10,7 +10,7 @@
 }
 
 .contact_us:hover {
-    background-color: var(--gold_color);
+    background-color: #ccc;
     color: black;
 }
 
