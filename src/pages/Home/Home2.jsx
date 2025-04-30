@@ -119,7 +119,6 @@ export default function Home() {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              backgroundColor: "#eaeaea",
               padding: "50px 20px",
             }}
           >
@@ -135,7 +134,6 @@ export default function Home() {
               <div className="container mt-4">
   <div className="row">
     {[
-      "Full-Stack Web Applications",
       "UI/UX Design",
       "Mobile App Development",
       "Static & Dynamic Websites",
@@ -163,6 +161,7 @@ export default function Home() {
             ref={(el) => (sectionsRef.current[2] = el)}
             style={{
               flex: "0 0 100vw",
+              width: "100%",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -201,8 +200,7 @@ export default function Home() {
                     gap: "20px",
                     justifyContent: "start",
                     alignItems: "start",
-                    marginLeft: '5vh',
-                    paddingLeft: 0,
+                    padding: 10,
                     fontSize: 25,
                     fontWeight: 500,
                     lineHeight: "2",
