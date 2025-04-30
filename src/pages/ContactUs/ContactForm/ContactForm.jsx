@@ -39,7 +39,6 @@ export default function ContactForm() {
   return (
     <div className="contact-form-container">
       <div className="text-start">
-        <h2>Contact Us</h2>
       </div>
       <form onSubmit={handleSubmit} className="contact-form">
         <input

@@ -1,4 +1,3 @@
-import React from "react";
 import "./NextButton.css";
 import { Link } from "react-router-dom";
 import { GrLinkNext } from "react-icons/gr";
@@ -10,7 +9,7 @@ export default function NextButton({ page = "" }) {
         {" "}
         <GrLinkNext />
       </Link>
-    </div>
+    </div> 
     </div>
   );
 }

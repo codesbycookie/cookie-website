@@ -1,11 +1,50 @@
-.nav-link{
-    margin: 0px;
-    margin: 0 10px;
+.nav-link {
+    color: #000000 !important; /* Default text is black */
+    font-weight: bold;
+    font-size: 18px !important;
+    transition: all 0.3s ease;
 }
 
-.nav-link .active {
-    color: var(--gold_color)
+.nav-link:hover {
+    color: #c18b13 !important; /* Hover effect changes to blue */
+    font-size: 22px !important;
 }
+
+/* Fixing the active state */
+.nav-link.active {
+    color: #c18b13 !important; /* Active link is blue */
+    font-weight: bold;
+    font-size: 22px !important;
+
+}
+
+.navbar{
+  background-color: transparent !important;
+}
+
+
+/* Bouncing Animation */
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .cookie-ham {
+    animation: bounce 1s infinite;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Rotation Animation on Click */
+  .rotate-once {
+    animation: none; /* stop bouncing */
+    transform: rotate(360deg);
+  }
+  
+
 
 .navbar-nav{
     margin-top: 0 ;
@@ -24,3 +63,12 @@
         margin-top: 15px !important;
     }
 }
+
+
+
+
+
+
+
+
+

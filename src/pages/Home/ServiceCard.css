@@ -1,0 +1,16 @@
+.service-card {
+    background-color: #fff;
+    border: 2px solid #c18b13;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.03);
+  }
+  

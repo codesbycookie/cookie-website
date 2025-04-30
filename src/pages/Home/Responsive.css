@@ -1,0 +1,86 @@
+/* Devices up to tablets (768px) */
+@media screen and (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+  
+    .contact_us {
+      padding: 10px 30px;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+  
+    .portfolio-card {
+      width: 90%;
+      margin: auto;
+    }
+  
+    .portfolio-image {
+      height: 140px;
+    }
+  
+    .service-card {
+      flex-direction: column;
+      font-size: 1rem;
+      gap: 8px;
+      padding: 1rem;
+    }
+  
+    .emoji {
+      font-size: 1.2rem;
+    }
+  
+    .section-title {
+      font-size: 2.5rem;
+      padding-left: 2rem;
+      padding-top: 5vh;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      font-size: 0.95rem;
+    }
+  
+    .contact-form button {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  /* Devices up to phones (480px) */
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h3,
+    p {
+      font-size: 1rem;
+    }
+  
+    .contact_us {
+      width: 100%;
+      font-size: 15px;
+    }
+  
+    .portfolio-image {
+      height: 120px;
+    }
+  
+    .portfolio-content h5 {
+      font-size: 1rem;
+    }
+  
+    .portfolio-content p {
+      font-size: 0.85rem;
+    }
+  
+    .service-card {
+      font-size: 0.95rem;
+      gap: 6px;
+    }
+  }
+  

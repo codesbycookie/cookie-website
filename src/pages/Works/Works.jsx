@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Works.css";
 import WorkCard from "./components/WorkCard";
 
 
 export default function Works() {
+      useEffect(() => {
+        document.title = 'Cookie • Works';
+      })
   return (
     <div>
       <div className="row g-0 w-100 h-100 d-flex justify-content-center align-items-center">

@@ -3,14 +3,241 @@
     font-size: 20px;
     margin-top: 20px;
     border-radius: 20px;
-    background-color: black;
-    color: white;
-    border: 0;
-    transition: color 6ms ease;
+    background-color: #c18b13; /* Primary Blue */
+    color: #FFFFFF; /* White Text */
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .contact_us:hover {
-    background-color: #ccc;
-    color: black;
+    background-color: #c18b13; /* Darker Blue */
+    color: #FFFFFF; /* White Text */
+    transform: translateY(-3px);
 }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.horizontal-container {
+  width: 100%;
+}
+.section {
+  box-sizing: border-box;
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .portfolio-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .portfolio-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .portfolio-content {
+    padding: 1rem;
+  }
+  
+  .portfolio-content h5 {
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 0.5rem;
+  }
+  
+  .portfolio-content p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .service-card {
+    background: #fdf4e3;
+    border-left: 6px solid #c18b13;
+    padding: 1.5rem 1.2rem;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    background: #fff8e8;
+    cursor: pointer;
+  }
+  
+  .emoji {
+    font-size: 1.5rem;
+  }
+
+
+  .contact-form input,
+.contact-form textarea {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #c18b13;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  border: none;
+}
+
+.contact-form button:hover {
+  background-color: #a4710e;
+}
+
+@media (max-width: 768px) {
+  /* General page spacing */
+  .horizontal-container {
+    padding: 0 1rem;
+  }
+
+
+
+  h1, h2, h3, h4 {
+    font-size: 1.5rem !important;
+  }
+
+  .contact_us {
+    padding: 10px 30px;
+    font-size: 16px;
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  .portfolio-card {
+    height: auto;
+  }
+
+  .portfolio-image {
+    height: 150px;
+  }
+
+  .service-card {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+
+  .horizontal-container {
+    display: flex;
+    height: fit-content;
+    flex-direction: column !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+
+  .section {
+    display: flex;
+    height: fit-content;
+    width: 100% !important;
+    min-height: 100vh;
+    flex-shrink: 0;
+    padding: 30px 0;
+    flex-grow: 1;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content{
+    display: flex; 
+    width: 100% !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px !important;
+  }
+
+  .content li{
+    font-size: 18px;
+  }
+
+  .content li b{
+    font-size: 20px !important;
+  }
+
+  .content b {
+    font-size: 25px !important;
+  }
+
+  #portfolio h1 , #contact-us h1 {
+    padding-left: 5vh !important;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .portfolio-image {
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 1.25rem !important;
+  }
+
+  .emoji {
+    font-size: 1.2rem;
+  }
+}
+
+
+ul .content {
+    text-align: start !important;
+  }
+
+
+  
+  
+  
 

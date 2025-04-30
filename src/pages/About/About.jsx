@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaCode,
   FaCss3Alt,
@@ -16,6 +16,11 @@ import { GrLinkNext } from "react-icons/gr";
 import NextButton from "../components/NextButton/NextButton";
 
 export default function About() {
+
+
+      useEffect(() => {
+        document.title = 'Cookie • About';
+      })
   return (
     <div>
       <div className="row g-0 p-4 d-flex justify-content-center align-items-center">

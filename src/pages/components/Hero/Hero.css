@@ -1,0 +1,103 @@
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-100px);
+    }
+}
+
+.dot {
+    animation: bounce 1s infinite !important;
+    transition: transform 0.5s ease;
+    color: #c18b13
+}
+
+.hero-title{
+    font-size: 50px;
+}
+
+.hero-button {
+    padding: 20px 70px;
+    font-size: 20px;
+    background-color: #c18b13;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    animation: bounce 1s infinite !important;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-button:hover {
+    background-color: #c18b13;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.hero-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #c18b19;
+}
+
+@keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+  
+  .scale-up-you {
+    animation: scaleUp 0.5s ease-in-out forwards;
+  }
+  
+  .you-word {
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  .corner-cookie {
+    position: absolute;
+    bottom: -100px;       /* You can also use 'top: 20px' if you want */
+    left: -200px;        /* Or 'left: 20px' for bottom-left */
+    width: 500px;       /* Adjust based on screen */
+    opacity: 0.7;      /* Low opacity for subtle effect */
+    pointer-events: none; /* So it doesn't interfere with mouse events */
+    z-index: -1;
+  }
+
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 32px;
+      text-align: center;
+    }
+  
+    .hero-button {
+      padding: 12px 40px;
+      font-size: 16px;
+      border-radius: 16px;
+    }
+  
+    .dot {
+      animation: bounce 1.2s infinite !important;
+      font-size: 24px;
+    }
+  
+    .you-word {
+      font-size: 18px;
+    }
+  
+    .corner-cookie {
+      width: 250px;
+      bottom: -50px;
+      left: -100px;
+      opacity: 0.6;
+    }
+  }
+  
