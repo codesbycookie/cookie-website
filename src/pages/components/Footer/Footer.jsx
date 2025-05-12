@@ -1,5 +1,4 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaXTwitter } from "react-icons/fa6";
-import { Link } from "react-router-dom";
 import './Footer.css';
 
 export default function Footer() {
