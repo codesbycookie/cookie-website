@@ -5,18 +5,19 @@ import Navbar from "../pages/components/Navbar/Navbar";
 import About from "../pages/About/About";
 import Works from "../pages/Works/Works";
 import Contact from "../pages/ContactUs/ContactUs";
+import Greet from '../pages/Greet/Greet'
 
 export default function AppRoutes() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/works" element={<Works/>} />
-        <Route path="/contact-us" element={<Contact/>} />
-
+        <Route path="/contact-us" element={<Contact/>} /> */}
+<Route path='*' element={<Greet/>}/>
       </Routes>
     </>
   );
