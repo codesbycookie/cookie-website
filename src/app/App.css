@@ -5,28 +5,7 @@
 
 
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: white;
-  border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: black; /* Slightly transparent black */
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.6); /* Softer on hover */
-}
 
 /* Global Font */
 body {
